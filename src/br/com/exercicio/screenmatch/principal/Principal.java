@@ -1,3 +1,5 @@
+package br.com.exercicio.screenmatch.principal;
+
 import br.com.exercicio.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.exercicio.screenmatch.calculo.FiltroRecomendacao;
 import br.com.exercicio.screenmatch.modelos.Episodio;
@@ -8,9 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do Filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -21,18 +21,14 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodeosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-        Filme meuFilme2 = new Filme();
-        meuFilme2.setNome("Avatar");
-        meuFilme2.setAnoDeLancamento(2023);
+        Filme meuFilme2 = new Filme("Avatar", 2023);
         meuFilme2.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calc = new CalculadoraDeTempo();
@@ -50,10 +46,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
+        Filme filmeDoPaulo = new Filme("Dogville", 2003);
+        //filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -66,6 +61,8 @@ public class Principal {
         System.out.println("Segundo filme: " + listaDeFilmes.get(1).getNome());
         System.out.println("Terceiro filme: " + listaDeFilmes.get(2).getNome());
         System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+
 
     }
 }

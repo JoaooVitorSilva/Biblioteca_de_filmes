@@ -18,7 +18,7 @@ O objetivo é praticar conceitos fundamentais da linguagem e de POO, como **clas
   - `FiltroRecomendacao.java` → Sugere títulos com base nas avaliações.
   - `Classificavel.java` → Interface para classes que podem ser classificadas.
 
-- **Classe `Principal.java`**
+- **Classe `br.com.exercicio.screenmatch.principal.Principal.java`**
   - Contém o método `main`, responsável por executar exemplos com filmes e séries:
     - Criar objetos de `Filme` e `Serie`.
     - Exibir ficha técnica.
